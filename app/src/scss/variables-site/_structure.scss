@@ -1,0 +1,32 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+.sprite {
+    background-image: url("images/spritesheet.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-azal{
+    width: 67px;
+    height: 36px;
+    background-position: -20px -20px;
+}
+
+.sprite-paypal {
+    width: 125px;
+    height: 43px;
+    background-position: -20px -96px;
+}
+
+.sprite-search {
+    width: 24px;
+    height: 23px;
+    background-position: -127px -20px;
+}
+
+.sprite-label {
+    width: 122px;
+    height: 86px;
+    background-position: -191px -20px;
+}

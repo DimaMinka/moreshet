@@ -1,0 +1,34 @@
+{
+  "name": "moreshet_ladino",
+  "homepage": "http://sigal.co.il",
+  "authors": [
+    {
+      "frontendDev": "Andrew Kvashuk",
+      "backendDev": "Dima Minka",
+      "email": "info@sigal.co.il",
+      "homepage": "http://cdk.co.il"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "wordpress-theme",
+    "gulp",
+    "bower",
+    "sass",
+    "browsersync",
+    "livereload"
+  ],
+  "license": "GPL-3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".sass-cache",
+    "build"
+  ],
+  "dependencies": {
+    "fancybox": "~2.1.5"
+  }
+}

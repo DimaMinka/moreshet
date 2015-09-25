@@ -1,0 +1,13 @@
+.widget-area-p   - widget area with pics
+.widget-area-b   - widget area with books
+.widget-area-ww  - wide widget area with wide content
+.widget-area-wt  - thin widget area with wide content
+.widget-area-tw  - wide widget area with thin content
+.widget-area-tt  - thin widget area with thin content
+
+.content-rs - content with right sidebar
+.content-ws - content without sidebar
+.content-ww - wide content with sidebar wide
+.content-wt - wide content with sidebar thin
+.content-tw - thin content with sidebar wide
+.content-tt - thin content with sidebar thin

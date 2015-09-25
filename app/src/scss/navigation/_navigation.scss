@@ -1,0 +1,230 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+@import "links";
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+@import "menus";
+
+.main-navigation {
+    @include cf;
+
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+
+    .menu {
+        text-align: center;
+        position: relative;
+        background-color: #fff;
+
+        &:after {
+            margin-right: calc(50% - 406px);
+            position: absolute;
+            display: block;
+            width: 813px;
+            height: 47px;
+            bottom: -12px;
+            z-index: 1;
+            content: "";
+            background: transparent url("images/Shadow-under-the-upper-menu.png") left top no-repeat;
+        }
+    }
+
+    .menu > .menu-item {
+        position: relative;
+        display: inline-block;
+        float: none;
+
+        @include font-size(1.25);
+
+        margin-left: 1em;
+        z-index: 10;
+
+        &:after {
+            content: '  |  ';
+            color: $color__red;
+            position: absolute;
+            top: 0;
+            left: -0.75em;
+        }
+
+        a {
+            min-height: 34px;
+        }
+
+        &:last-child {
+            margin-left: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.current-menu-item a {
+    color: $color__red;
+}
+
+.sub-menu {
+    box-shadow: none;
+
+    .menu-item {
+        text-align: right;
+        background-color: #f1f0f0;
+
+        @include font-size(1.125);
+
+        font-weight: normal;
+
+        a {
+            padding-right: 5px;
+            width: 7.777em;
+        }
+    }
+}
+
+.menu-item:hover .sub-menu {
+    right: -9px;
+    top: 34px;
+}
+
+/*responsive nav*/
+#wprmenu_bar, #wprmenu_bar *, #wprmenu_menu, #wprmenu_menu * {
+    text-align: right;
+}
+
+#wprmenu_bar {
+    right: 0px;
+    left: auto;
+    box-shadow: 0 0 5.3px 3.7px rgba(0, 0, 0, 0.17);
+}
+
+#wprmenu_bar .bar_logo {
+    padding-left: 8px;
+    padding-right: auto;
+}
+
+#wprmenu_bar .menu_title{
+	text-align: left;
+}
+
+#wprmenu_bar .wprmenu_icon_menu {
+    margin-left: 5px;
+    margin-right: auto;
+}
+
+#wprmenu_bar .wprmenu_icon {
+    float: right;
+    margin-left: 16px;
+    margin-right: auto;
+}
+
+#wprmenu_bar .wprmenu_icon span {
+    right: 0px;
+    left: auto;
+}
+
+#wprmenu_menu.top {
+    right: 0px;
+    left: auto;
+}
+
+#wprmenu_menu.wprmenu_levels a.wprmenu_parent_item {
+    margin-left: 44px;
+    padding-right: 58px;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li {
+    padding-right: 44px;
+    padding-left: 0;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li {
+    padding-right: 88px;
+    padding-left: 0;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li ul li {
+    padding-right: 132px;
+    padding-left: 0;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li ul li ul li {
+    padding-right: 176px;
+    padding-left: 0;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li.wprmenu_parent_item_li {
+    padding-right: 0px;
+    padding-left: 0;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li.wprmenu_parent_item_li .wprmenu_icon_par {
+    margin-right: 44px;
+    margin-left: auto;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li.wprmenu_parent_item_li a.wprmenu_parent_item {
+    margin-right: 88px;
+    margin-left: auto;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li.wprmenu_parent_item_li {
+    padding-right: 0px;
+    padding-left: 0;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li.wprmenu_parent_item_li .wprmenu_icon_par {
+    margin-right: 88px;
+    margin-left: auto;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li.wprmenu_parent_item_li a.wprmenu_parent_item {
+    margin-right: 132px;
+    margin-left: auto;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li ul li.wprmenu_parent_item_li {
+    padding-right: 0px;
+    padding-left: 0;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li ul li.wprmenu_parent_item_li .wprmenu_icon_par {
+    margin-right: 132px;
+    margin-left: auto;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li ul li.wprmenu_parent_item_li a.wprmenu_parent_item {
+    margin-right: 176px;
+    margin-left: auto;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li ul li ul li.wprmenu_parent_item_li {
+    padding-right: 0px;
+    padding-left: 0;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li ul li ul li.wprmenu_parent_item_li .wprmenu_icon_par {
+    margin-right: 176px;
+    margin-left: auto;
+}
+
+#wprmenu_menu.wprmenu_levels ul li ul li ul li ul li ul li.wprmenu_parent_item_li a.wprmenu_parent_item {
+    margin-right: 220px;
+    margin-left: auto;
+}
+
+#wprmenu_menu .menu-item:hover .sub-menu {
+    right: 0;
+    top: 0;
+}
+
+#wprmenu_menu .wprmenu_icon_par {
+	transform: rotate(180deg);
+}
+#wprmenu_menu .wprmenu_icon_par.wprmenu_par_opened {
+	transform: rotate(0deg);
+}

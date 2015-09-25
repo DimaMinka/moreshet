@@ -1,0 +1,236 @@
+/*CONTENT AREAS*/
+.content-area .page {
+	margin-bottom: 0;
+}
+
+.content-rs {
+	width: 36.82%;
+	display: inline-block;
+  margin-right: 1em;
+  padding-top: 3.3em;
+}
+
+.content-ws {
+  margin-right: 7.5em;
+  margin-left: 1.5em;
+  padding-top: 5.5em;
+}
+
+.content-tw {
+  padding-top: 3.1em;
+	margin-right: 7.2em;
+	float: right;
+	width:56%;
+}
+
+.content-ww {
+  padding-top: 4em;
+	margin-right: 1.2em;
+	float: right;
+	width:71%;
+}
+
+.content-tt {
+  padding-top: 4em;
+	margin-right: 1.2em;
+	float: right;
+	width:71%;
+}
+
+/*LEFT ASIDES*/
+.widget-area-b {
+	width: 33.98%;
+	float: left;
+	margin-left: 1.1875em;
+
+	& > * {
+		margin-bottom: 0.625em;
+	}
+}
+
+.widget-area-p {
+	width: 33.98%;
+	float: left;
+	margin-left: 1.1875em;
+
+  .label {
+    margin-bottom: 1.5em;
+  }
+
+	& > * {
+		margin-bottom: 0.625em;
+	}
+}
+
+.widget-area-tw {
+  width: 23.5%;
+  margin-left: 2.5em;
+
+  .label {
+    margin-left: 1em;
+    margin-bottom: 3em;
+  }
+}
+
+.widget-area-ww {
+  width: 22%;
+  margin-left: 1.2em; 
+
+  .label {
+    margin-bottom: 1.5em;
+  }
+}
+
+.widget-area-tt {
+	width: 17%;
+  margin-left: 1.2em; 
+
+  .label {
+    margin-bottom: 1.4em;
+  }
+}
+
+
+/*RIGHT ASIDE*/
+.secondary-right {
+	width: 22.75%;
+	float: right;
+	margin-right: 1.1875em;
+	padding-top: 5.25em;
+	
+	& > * {
+		margin-bottom: 0.625em;
+	}
+}
+
+@media screen and (max-width: 64.75em) {
+	.content-area.content-rs {
+		width: 50%;
+		margin: 0;
+		padding: 0 2em;
+	}
+
+	.secondary-right {
+		padding: 2em;
+		margin: 0;
+		width: 100%;
+
+		a {
+			width: 50%;
+			float: right;
+		}
+	}
+
+	.widget-area-b,
+	.widget-area-p {
+		width: 50%;
+		margin: 0;
+		padding: 0 2em;
+	}
+}
+
+@media screen and (max-width: 52.5em) {
+	.content-area.content-rs {
+		width: 100%;
+		margin: 0;
+		padding: 0 2em;
+	}
+
+	.widget-area-b,
+	.widget-area-p {
+		width: 100%;
+		margin: 0;
+		padding: 0 2em;
+	}
+
+	.pics {
+		display: inline-block;
+		margin: 1em auto;
+		padding: 0 1em;
+		text-align: center;
+
+		a {
+			margin: 1em auto;
+			padding: 0 20%;
+			display: inline-block;
+		}
+	}
+
+	.widget-area-b {
+		.books {
+		text-align: center; 
+			.book {
+				float: none;
+				display: inline-block;
+				margin: 0 0.5em 1em;
+
+				&.wide {
+					width: auto;
+				}
+			}
+		}
+	}
+	.content-ws,
+	.content-tw,
+	.content-ww,
+	.content-tt {
+		width: 100%;
+		margin: 0;
+		padding: 1em;
+	}
+
+	.widget-area-ws,
+	.widget-area-tw,
+	.widget-area-ww,
+	.widget-area-tt {
+		width: 100%;
+		margin: 0;
+		padding: 1em;
+		text-align: center;
+	}
+
+
+
+	.page .gallery {
+		text-align: center;
+	}
+
+	.label {
+		display: block;
+		float: none;
+
+		a{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	.books {
+		min-width: 0;
+	}
+
+}
+
+@media screen and (max-width: 38.4em) {
+	.secondary-right {
+		text-align: center;
+
+		.videos {
+
+			a {
+				margin-bottom: 1em;
+				float: none;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 25em) {
+
+	.site {
+		width: 100%;
+		margin: 0;
+		overflow: hidden;
+	}
+}
