@@ -5,6 +5,7 @@
 *.bak
 *.log
 *.swp
+.idea
 
 ## Windows
 Desktop.ini
@@ -35,4 +36,3 @@ node_modules
 vendor
 build
 dist
-_normalize.scss
