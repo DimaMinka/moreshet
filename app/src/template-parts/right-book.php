@@ -15,44 +15,49 @@ $sideBtnLink  = ( get_theme_mod( 'sg_side_btn_link', true ) ? get_theme_mod( 'sg
 
 $phoneTitle  = ( get_theme_mod( 'sg_phone_title', true ) ? get_theme_mod( 'sg_phone_title', true ) : '' );
 $phoneNumber  = ( get_theme_mod( 'sg_phone', true ) ? get_theme_mod( 'sg_phone', true ) : '' );
+
+$bookCat = get_post_meta( $post->ID, 'sg_book_category', true );
+
 ?>
 
 <div id="secondary" class="widget-area widget-area-b" role="complementary">
-    <!-- BOOKS + PAYPAL + KATAVA -->
 
-    <div class="label"><a class="sprite sprite-label" href="<?php echo $labelTopLink; ?>"<?php echo $labelTop; ?>></a></div>
+    <?php if( $bookCat != '' ) : ?>
+        <!-- BOOKS + PAYPAL + KATAVA -->
 
-    <div class="books">
-        <?php
-        $bookCat = get_post_meta( $post->ID, 'sg_book_category', true );
-        $term_book = get_term( $bookCat, 'book_category' );
-        ?>
-        <h2><?php echo $term_book->name; ?></h2>
+        <div class="label"><a class="sprite sprite-label" href="<?php echo $labelTopLink; ?>"<?php echo $labelTop; ?>></a></div>
 
-        <?php
-        $books = get_posts('posts_per_page=-1&orderby=menu_order&order=ASC&post_type=book');
-        foreach ( $books as $book ) :
-            $bookClass = '';
-            $postThumbId = get_post_thumbnail_id( $book->ID );
-            $bookClass .= thumbs_vertical_check( $postThumbId );
-            $bookClass .= ( !$book->post_excerpt ? ' sold' : '' );
-        ?>
+        <div class="books">
+            <?php
+            $term_book = get_term( $bookCat, 'book_category' );
+            ?>
+            <h2><?php echo $term_book->name; ?></h2>
 
-            <a id="book-<?php echo $book->ID; ?>" class="book<?php echo $bookClass; ?>" href="<?php echo get_permalink( $book->ID ); ?>">
-                <div><?php echo get_the_post_thumbnail( $book->ID, 'medium' ); ?></div>
-                <span><?php echo $book->post_title; ?></span>
-            </a>
+            <?php
+            $books = get_posts('posts_per_page=-1&orderby=menu_order&order=ASC&post_type=book');
+            foreach ( $books as $book ) :
+                $bookClass = '';
+                $postThumbId = get_post_thumbnail_id( $book->ID );
+                $bookClass .= thumbs_vertical_check( $postThumbId );
+                $bookClass .= ( !$book->post_excerpt ? ' sold' : '' );
+                ?>
 
-        <?php endforeach; ?>
+                <a id="book-<?php echo $book->ID; ?>" class="book<?php echo $bookClass; ?>" href="<?php echo get_permalink( $book->ID ); ?>">
+                    <div><?php echo get_the_post_thumbnail( $book->ID, 'medium' ); ?></div>
+                    <span><?php echo $book->post_title; ?></span>
+                </a>
 
-        <a class="book-tel" href="tel:<?php echo $phoneNumber; ?>"><?php echo $phoneTitle; ?></a>
-    </div>
+            <?php endforeach; ?>
 
-    <div class="paypal"><a href="<?php echo $sideBtnLink; ?>" class="sprite sprite-paypal"<?php echo $sideBtn; ?>>PAYPAL</a></div>
+            <a class="book-tel" href="tel:<?php echo $phoneNumber; ?>"><?php echo $phoneTitle; ?></a>
+        </div>
 
-    <?php $sideThumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', false ); ?>
-    <a class="katava fancybox" href="<?php echo $sideThumb[0]; ?>" rel="group" ><?php the_post_thumbnail( 'medium' ); ?></a>
+        <div class="paypal"><a href="<?php echo $sideBtnLink; ?>" class="sprite sprite-paypal"<?php echo $sideBtn; ?>>PAYPAL</a></div>
 
+        <?php $sideThumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', false ); ?>
+        <a class="katava fancybox" href="<?php echo $sideThumb[0]; ?>" rel="group" ><?php the_post_thumbnail( 'medium' ); ?></a>
+
+    <?php endif; ?>
 
 </div>
 
@@ -60,36 +65,36 @@ $phoneNumber  = ( get_theme_mod( 'sg_phone', true ) ? get_theme_mod( 'sg_phone',
     <!-- VIDEOS -->
 
     <div class="videos">
-    <?php
-    $args = array(
-        'post_type'=> 'post',
-        'post_status' => 'publish',
-        'order' => 'ASC',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'post_format',
-                'field' => 'slug',
-                'terms' => array( 'post-format-video' ),
-                'operator' => 'IN'
+        <?php
+        $args = array(
+            'post_type'=> 'post',
+            'post_status' => 'publish',
+            'order' => 'ASC',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'post_format',
+                    'field' => 'slug',
+                    'terms' => array( 'post-format-video' ),
+                    'operator' => 'IN'
+                )
             )
-        )
-    );
-    $videos = get_posts( $args );
-    foreach ($videos as $video) :
+        );
+        $videos = get_posts( $args );
+        foreach ($videos as $video) :
 
-        preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $video->post_content, $matches);
+            preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $video->post_content, $matches);
 
-        $linkVideo = ( $video->post_excerpt != '' ? $video->post_excerpt : 'https://www.youtube.com/embed/' . $matches[1] . '?autoplay=1' );
-        $videoClasses = ( $video->post_excerpt != '' ? 'local' : 'youtube fancybox.iframe');
+            $linkVideo = ( $video->post_excerpt != '' ? $video->post_excerpt : 'https://www.youtube.com/embed/' . $matches[1] . '?autoplay=1' );
+            $videoClasses = ( $video->post_excerpt != '' ? 'local' : 'youtube fancybox.iframe');
 
-    ?>
+            ?>
 
-        <a href="<?php echo $linkVideo; ?>" class="<?php echo $videoClasses; ?>">
-            <?php if( has_post_thumbnail( $video->ID ) ) : echo get_the_post_thumbnail( $video->ID, 'medium' ); else : ?><img src="<?php echo get_template_directory_uri(); ?>/images/film.png" alt="" class=""><?php endif; ?>
-            <span><?php if( $video->post_excerpt ) echo $video->post_title; ?></span>
-        </a>
+            <a href="<?php echo $linkVideo; ?>" class="<?php echo $videoClasses; ?>">
+                <?php if( has_post_thumbnail( $video->ID ) ) : echo get_the_post_thumbnail( $video->ID, 'medium' ); else : ?><img src="<?php echo get_template_directory_uri(); ?>/images/film.png" alt="" class=""><?php endif; ?>
+                <span><?php if( $video->post_excerpt ) echo $video->post_title; ?></span>
+            </a>
 
-    <?php endforeach; ?>
+        <?php endforeach; ?>
 
     </div>
 

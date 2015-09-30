@@ -56,17 +56,19 @@ class page_metabox {
 
         echo '	<tr>';
         echo '		<th style="width: 40px;"><label for="sg_sidebar_right_book" class="sg_sidebar_right_book_label">' . __( 'Style' ) . '</label></th>';
-        echo '		<td>';
-        echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_regular" ' . checked( $sg_sidebar_style, 'sg_regular', false ) . '> ' . __( 'Default' ) . '<br>';
+        echo '		<td style="padding: 15px 0;">';
+        echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="" ' . checked( $sg_sidebar_style, '', false ) . '> ' . __( 'Default' ) . '<br>';
         echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_sidebar_right_book" ' . checked( $sg_sidebar_style, 'sg_sidebar_right_book', false ) . '> ' . __( 'Sidebar' ) . ' - ' . __( 'Align right' ) . '<br>';
+        echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_sidebar_wide" ' . checked( $sg_sidebar_style, 'sg_sidebar_wide', false ) . '> ' . __( 'Sidebar' ) . ' - ' . __( 'Align right' ) . '&nbsp;' . __( 'Wide', 'moreshet-ladino' ) . '<br>';
+        echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_sidebar_no" ' . checked( $sg_sidebar_style, 'sg_sidebar_no', false ) . '> ' . __( 'Sidebar' ) . ' - ' . __( 'No' ) . '<br>';
         echo '		</td>';
         echo '	</tr>';
 
         echo '	<tr>';
         echo '		<th style="width: 40px;"><label for="sg_book_category" class="sg_book_category_label">' . __( 'Books', 'moreshet-ladino' ) . '</label></th>';
-        echo '		<td>';
+        echo '		<td style="padding: 15px 0;">';
         echo '			<select id="sg_book_category" name="sg_book_category" class="sg_book_category_field">';
-        echo '			<option value="sg_1 " ' . selected( $sg_book_category, '', false ) . '> ' . __( 'Select Category' );
+        echo '			<option value="" ' . selected( $sg_book_category, '', false ) . '> ' . __( 'Select Category' );
 
         $book_categories = get_terms( 'book_category', '' );
         foreach ( $book_categories as $book_cat ) {
@@ -135,8 +137,8 @@ class pageThumbs_metabox {
     public function add_metabox() {
 
         add_meta_box(
-            'page_metaboxe',
-            __( 'Thumbnails' ),
+            'page_metabox',
+            __( 'Add new header image' ),
             array( $this, 'render_metabox' ),
             'page',
             'side',
@@ -156,10 +158,22 @@ class pageThumbs_metabox {
         if( empty( $sg_thumb_1 ) ) $sg_thumb_1 = '';
         if( empty( $sg_thumb_2 ) ) $sg_thumb_2 = '';
         if( empty( $sg_thumb_3 ) ) $sg_thumb_3 = '';
+
         $image = '';
+        $image_2 = '';
+        $image_3 = '';
+
         if ( $sg_thumb_1 ) {
             $image = wp_get_attachment_image_src( $sg_thumb_1, 'thumbnail' );
             $image = $image[0];
+        }
+        if ( $sg_thumb_2 ) {
+            $image_2 = wp_get_attachment_image_src( $sg_thumb_2, 'thumbnail' );
+            $image_2 = $image_2[0];
+        }
+        if ( $sg_thumb_3 ) {
+            $image_3 = wp_get_attachment_image_src( $sg_thumb_3, 'thumbnail' );
+            $image_3 = $image_3[0];
         }
 
         // Form fields.
@@ -177,6 +191,30 @@ class pageThumbs_metabox {
         echo '		</td>';
         echo '	</tr>';
 
+        echo '	<tr>';
+        echo '		<th><label for="sg_thumb_2" class="sg_thumb_2_label">' . __( 'Image' ) . ' - ' . __( 'Align center' ) . '</label></th>';
+        echo '	</tr>';
+        echo '	<tr>';
+        echo '		<td>';
+        echo '      <img src="' . $image_2 . '" class="sg_preview_image" style="max-width: 150px;" />';
+        echo '  	<input type="hidden" id="sg_thumb_2" name="sg_thumb_2"  class="sg_thumb_2_field sg_upload_image" value="' . esc_attr__( $sg_thumb_2 ) . '">';
+        echo '      <input class="sg_upload_image_button button" type="button" value="' . __( 'Choose Image' ) . '" />';
+        echo '      <small><a href="#" class="sg_clear_image">' . __( 'Reset Image' ) . '</a></small>';
+        echo '		</td>';
+        echo '	</tr>';
+
+        echo '	<tr>';
+        echo '		<th><label for="sg_thumb_2" class="sg_thumb_2_label">' . __( 'Image' ) . ' - ' . __( 'Align left' ) . '</label></th>';
+        echo '	</tr>';
+        echo '	<tr>';
+        echo '		<td>';
+        echo '      <img src="' . $image_3 . '" class="sg_preview_image" style="max-width: 150px;" />';
+        echo '  	<input type="hidden" id="sg_thumb_3" name="sg_thumb_3"  class="sg_thumb_3_field sg_upload_image" value="' . esc_attr__( $sg_thumb_3 ) . '">';
+        echo '      <input class="sg_upload_image_button button" type="button" value="' . __( 'Choose Image' ) . '" />';
+        echo '      <small><a href="#" class="sg_clear_image">' . __( 'Reset Image' ) . '</a></small>';
+        echo '		</td>';
+        echo '	</tr>';
+
         echo '</table>';
 
     }
@@ -189,9 +227,13 @@ class pageThumbs_metabox {
 
         // Sanitize user input.
         $sg_new_thumb_1 = isset( $_POST[ 'sg_thumb_1' ] ) ? sanitize_text_field( $_POST[ 'sg_thumb_1' ] ) : '';
+        $sg_new_thumb_2 = isset( $_POST[ 'sg_thumb_2' ] ) ? sanitize_text_field( $_POST[ 'sg_thumb_2' ] ) : '';
+        $sg_new_thumb_3 = isset( $_POST[ 'sg_thumb_3' ] ) ? sanitize_text_field( $_POST[ 'sg_thumb_3' ] ) : '';
 
         // Update the meta field in the database.
         update_post_meta( $post_id, 'sg_thumb_1', $sg_new_thumb_1 );
+        update_post_meta( $post_id, 'sg_thumb_2', $sg_new_thumb_2 );
+        update_post_meta( $post_id, 'sg_thumb_3', $sg_new_thumb_3 );
 
     }
 
