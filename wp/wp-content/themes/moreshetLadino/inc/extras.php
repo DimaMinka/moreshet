@@ -104,6 +104,7 @@ add_action( 'init', 'books', 0 );
 if ( ! function_exists( 'thumbs_vertical_check' ) ) :
     function thumbs_vertical_check( $post_thumbnail_id ) {
 
+        $html = '';
         $image_data = wp_get_attachment_image_src( $post_thumbnail_id , 'medium' );
 
         //Get the image width and height from the data provided by wp_get_attachment_image_src()

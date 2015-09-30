@@ -55,17 +55,18 @@ class page_metabox {
         echo '<table class="form-table">';
 
         echo '	<tr>';
-        echo '		<th style="width: 40px;"><label for="sg_sidebar_right_book" class="sg_sidebar_right_book_label">' . __( 'Style' ) . '</label></th>';
+        echo '		<th style="padding: 20px 0 20px 5px;width: 40px;"><label for="sg_sidebar_right_book" class="sg_sidebar_right_book_label">' . __( 'Style' ) . '</label></th>';
         echo '		<td style="padding: 15px 0;">';
         echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="" ' . checked( $sg_sidebar_style, '', false ) . '> ' . __( 'Default' ) . '<br>';
         echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_sidebar_right_book" ' . checked( $sg_sidebar_style, 'sg_sidebar_right_book', false ) . '> ' . __( 'Sidebar' ) . ' - ' . __( 'Align right' ) . '<br>';
-        echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_sidebar_wide" ' . checked( $sg_sidebar_style, 'sg_sidebar_wide', false ) . '> ' . __( 'Sidebar' ) . ' - ' . __( 'Align right' ) . '&nbsp;' . __( 'Wide', 'moreshet-ladino' ) . '<br>';
+        echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_sidebar_wide" ' . checked( $sg_sidebar_style, 'sg_sidebar_wide', false ) . '> ' . __( 'Sidebar' ) . ' - ' . __( 'Align left' ) . '&nbsp;' . __( 'Wide', 'moreshet-ladino' ) . '<br>';
+        echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_sidebar_wide2" ' . checked( $sg_sidebar_style, 'sg_sidebar_wide2', false ) . '> ' . __( 'Sidebar' ) . ' - ' . __( 'Align left' ) . '&nbsp;' . __( 'Wide', 'moreshet-ladino' ) . '2<br>';
         echo '			<input type="radio" name="sg_sidebar_style" class="sg_sidebar_style_field" value="sg_sidebar_no" ' . checked( $sg_sidebar_style, 'sg_sidebar_no', false ) . '> ' . __( 'Sidebar' ) . ' - ' . __( 'No' ) . '<br>';
         echo '		</td>';
         echo '	</tr>';
 
         echo '	<tr>';
-        echo '		<th style="width: 40px;"><label for="sg_book_category" class="sg_book_category_label">' . __( 'Books', 'moreshet-ladino' ) . '</label></th>';
+        echo '		<th style="padding: 20px 0 20px 5px;width: 40px;"><label for="sg_book_category" class="sg_book_category_label">' . __( 'Books', 'moreshet-ladino' ) . '</label></th>';
         echo '		<td style="padding: 15px 0;">';
         echo '			<select id="sg_book_category" name="sg_book_category" class="sg_book_category_field">';
         echo '			<option value="" ' . selected( $sg_book_category, '', false ) . '> ' . __( 'Select Category' );

@@ -29,7 +29,7 @@
         if( has_shortcode( $post->post_content, 'gallery' ) ) {
 
             $galleries = get_post_galleries_images( $post->ID, false );
-            
+
             $sidebar_style = get_post_meta( $post->ID, 'sg_sidebar_style', true );
             $arrayCount = ( $sidebar_style == 'sg_sidebar_no' ? '0' : '1' );
 

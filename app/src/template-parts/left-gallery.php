@@ -26,8 +26,7 @@
                 $imageAttr = wp_get_attachment_image_src($postImage->ID, 'medium', '');
                 $imageClass = get_post_meta($postImage->ID, '_wp_attachment_image_alt', true) ? ' shadow' : ' red-border'; ?>
 
-                <a class="fancybox<?php echo $imageClass; ?>" href="<?php echo $image; ?>"
-                   rel="group-<?php echo $post->ID; ?>">
+                <a class="fancybox<?php echo $imageClass; ?>" href="<?php echo $image; ?>" rel="group-<?php echo $post->ID; ?>">
                     <img src="<?php echo $imageAttr[0]; ?>" alt="<?php echo $post->post_title; ?>">
                 </a>
 

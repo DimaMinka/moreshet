@@ -46,17 +46,24 @@
 
 	</header><!-- #masthead -->
 
-	<div class="page-photos">
-		<div class="photo">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/header_photo1.jpg" alt="photo1">
-		</div>
-		<div class="photo">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/header_photo2.jpg" alt="photo2">
-		</div>
-		<div class="photo">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/header_photo3.jpg" alt="photo3">
-		</div>
-	</div>
+    <div class="page-photos">
+        <?php
+        for( $i = 1; $i <= 3; $i++) {
+            $check_thumbID = ( is_page() ? get_post_meta( $post->ID, 'sg_thumb_'.$i, true ) : '' );
+            $postID = ( $check_thumbID != '' ? $post->ID : get_option( 'page_on_front' ) );
+            $thumbID = get_post_meta( $postID, 'sg_thumb_'.$i, true );
+
+            $image = wp_get_attachment_image_src( $thumbID, 'large' );
+            printf('
+                <div class="photo">
+                    <img src="%s" alt="%s">
+                </div>',
+                $image[0],
+                get_the_title( $thumbID )
+            );
+        }
+        ?>
+    </div>
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'moreshet-ladino' ); ?></button>

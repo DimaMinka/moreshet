@@ -19,8 +19,10 @@ $sidebar_style = get_post_meta( $post->ID, 'sg_sidebar_style', true );
 if( $sidebar_style == '' ) $classes = ' content-tt';
 if( $sidebar_style == 'sg_sidebar_right_book' ) $classes = ' content-rs';
 if( $sidebar_style == 'sg_sidebar_wide' ) $classes = ' content-tw';
+if( $sidebar_style == 'sg_sidebar_wide2' ) $classes = ' content-ww';
 if( $sidebar_style == 'sg_sidebar_no' ) $classes = ' content-ws';
 $sideClasses = ( $sidebar_style == '' ? ' widget-area-tt' : ' widget-area-tw' );
+if( $sidebar_style == 'sg_sidebar_wide2' ) $sideClasses = ' widget-area-ww';
 
 ?>
 
@@ -34,7 +36,7 @@ $sideClasses = ( $sidebar_style == '' ? ' widget-area-tt' : ' widget-area-tw' );
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-    <?php if( $sidebar_style == '' || $sidebar_style == 'sg_sidebar_wide' ) : ?>
+    <?php if( $sidebar_style == '' || $sidebar_style == 'sg_sidebar_wide' || $sidebar_style == 'sg_sidebar_wide2' ) : ?>
     <div id="secondary" class="widget-area<?php echo $sideClasses;  ?>" role="complementary">
         <?php get_template_part( 'template-parts/left', 'gallery' ); ?>
     </div>

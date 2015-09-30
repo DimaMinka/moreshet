@@ -1,0 +1,505 @@
+# Translation of Twenty Fifteen in Hebrew
+# This file is distributed under the same license as the Twenty Fifteen package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Twenty Fifteen\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2015-10-01 02:38+0300\n"
+"PO-Revision-Date: 2015-10-01 02:38+0300\n"
+"Last-Translator: Dimitry Minka <cdk@cdk.co.il>\n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.4\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "העמוד לא נמצא."
+
+# @ _s
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+# @ _s
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr ""
+
+# @ _s
+#. translators: %1$s: smiley
+#: 404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "תגובה אחת בנושא &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s תגובות בנושא &ldquo;%2$s&rdquo;"
+
+#: comments.php:38 comments.php:59
+msgid "Comment navigation"
+msgstr "ניווט תגובות"
+
+#: comments.php:41 comments.php:62
+msgid "Older Comments"
+msgstr "תגובות ישנות"
+
+#: comments.php:42 comments.php:63
+msgid "Newer Comments"
+msgstr "תגובות חדשות"
+
+#: comments.php:75
+msgid "Comments are closed."
+msgstr "סגור לתגובות."
+
+# @ _s
+#: footer.php:16
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:16
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "פועל על %s"
+
+# @ _s
+#: footer.php:18
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:45 header.php:32
+msgid "Primary Menu"
+msgstr "תפריט ראשי"
+
+# @ _s
+#: functions.php:100
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:23
+msgid "Skip to content"
+msgstr "דילוג לתוכן"
+
+# @ _s
+#: inc/extras.php:52
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:27
+msgid "Older posts"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:31
+msgid "Newer posts"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:86
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:91
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+# @ _s
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:108 inc/template-tags.php:114
+msgid ", "
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:110
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:116
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:122
+msgid "Leave a comment"
+msgstr "השאירו תגובה"
+
+#: inc/template-tags.php:122
+msgid "1 Comment"
+msgstr "תגובה אחת"
+
+#: inc/template-tags.php:122
+msgid "% Comments"
+msgstr "% תגובות"
+
+#: inc/template-tags.php:126 template-parts/content-page.php:26
+msgid "Edit"
+msgstr "עריכה"
+
+# @ _s
+#: inc/template-tags.php:143
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:145
+#, php-format
+msgid "Tag: %s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:147
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:149
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:149
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:151
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:151
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:153
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:153
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:156
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:158
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:160
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:162
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:164
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:166
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:168
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:170
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:172
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:175
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+# @ _s
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/template-tags.php:179
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+# @ _s
+#: inc/template-tags.php:181
+msgid "Archives"
+msgstr ""
+
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "תוצאות חיפוש עבור %s"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "לא נמצא"
+
+#: template-parts/content-none.php:20
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "מוכן לפרסם את הפוסט הראשון שלך? <a href=\"%1$s\">התחל כאן</a>."
+
+#: template-parts/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "לא נמצאו תוצאות התואמות לביטוי החיפוש, ניתן לנסות שוב עם ביטויים אחרים."
+
+#: template-parts/content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr "נראה כי לא ניתן למצוא את מה שחיפשת, אולי חיפוש יעזור."
+
+#: template-parts/content-page.php:19 template-parts/content-single.php:23
+#: template-parts/content.php:32
+msgid "Pages:"
+msgstr "עמודים:"
+
+# @ _s
+#. translators: %s: Name of current post
+#: template-parts/content.php:25
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#~ msgid "the WordPress team"
+#~ msgstr "צוות וורדפרס"
+
+#~ msgid ""
+#~ "Our 2015 default theme is clean, blog-focused, and designed for clarity. "
+#~ "Twenty Fifteen's simple, straightforward typography is readable on a wide "
+#~ "variety of screen sizes, and suitable for multiple languages. We designed "
+#~ "it using a mobile-first approach, meaning your content takes center-stage, "
+#~ "regardless of whether your visitors arrive by smartphone, tablet, laptop, "
+#~ "or desktop computer."
+#~ msgstr ""
+#~ "התבנית לשנת 2015 נקייה, ממוקדת בבלוגים, ומיועד לבהירות. לתבנית טיפוגרפיה "
+#~ "פשוטה, מותאמת למגוון רחב של גדלי מסך, ותומכת במספר רב של שפות. היא עוצבה "
+#~ "בגישת mobile-first, כלומר התוכן נמצא במרכז הבמה, בין אם המבקרים משתמשים "
+#~ "בטלפון חכם, מחשב לוח, מחשב נייד, או מחשב שולחני."
+
+#~ msgid "https://wordpress.org/themes/twentyfifteen/"
+#~ msgstr "https://wordpress.org/themes/twentyfifteen/"
+
+#~ msgid "Twenty Fifteen"
+#~ msgstr "Twenty Fifteen"
+
+#~ msgid "Previous post:"
+#~ msgstr "הפוסט הקודם:"
+
+#~ msgid "Previous"
+#~ msgstr "קודם"
+
+#~ msgid "Next post:"
+#~ msgstr "הפוסט הבא:"
+
+#~ msgid "Next"
+#~ msgstr "הבא"
+
+#~ msgctxt "Used before full size attachment link."
+#~ msgid "Full size"
+#~ msgstr "מסך מלא"
+
+#~ msgctxt "Used before tag names."
+#~ msgid "Tags"
+#~ msgstr "תגיות"
+
+#~ msgctxt "Used before category names."
+#~ msgid "Categories"
+#~ msgstr "קטגוריות"
+
+#~ msgctxt "Used between list items, there is a space after the comma."
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgctxt "Used before post author name."
+#~ msgid "Author"
+#~ msgstr "מחבר"
+
+#~ msgctxt "Used before post format."
+#~ msgid "Format"
+#~ msgstr "פורמט"
+
+#~ msgctxt "Used before publish date."
+#~ msgid "Posted on"
+#~ msgstr "פורסם בתאריך"
+
+#~ msgid "Featured"
+#~ msgstr "ראשי"
+
+#~ msgid "Blue"
+#~ msgstr "כחול"
+
+#~ msgid "Purple"
+#~ msgstr "סגול"
+
+#~ msgid "Pink"
+#~ msgstr "וורוד"
+
+#~ msgid "Yellow"
+#~ msgstr "צהוב"
+
+#~ msgid "Dark"
+#~ msgstr "שחור"
+
+#~ msgid "Default"
+#~ msgstr "ברירת מחדל"
+
+#~ msgid "Header and Sidebar Background Color"
+#~ msgstr "צבע רקע של התפריט העליון והתפריט הצדדי"
+
+#~ msgid ""
+#~ "Applied to the header on small screens and the sidebar on wide screens."
+#~ msgstr "חל על התפריט העליונה במסכים קטנים, והתפריט הצדדי במסכים רחבים."
+
+#~ msgid "Base Color Scheme"
+#~ msgstr "צבע בסיס"
+
+#~ msgid "Header and Sidebar Text Color"
+#~ msgstr "צבע טקסט של התפריט העליון והתפריט הצדדי"
+
+#~ msgid ""
+#~ "Twenty Fifteen requires at least WordPress version 4.1. You are running "
+#~ "version %s. Please upgrade and try again."
+#~ msgstr ""
+#~ "דרישת המינימום להפעלת התבנית Twenty Thirteen היא וורדפרס בגרסה 4.1. האתר "
+#~ "מפעיל וורדפרס בגרסה %s. יש לשדרג את גרסת וורדפרס ולנסות שנית."
+
+#~ msgctxt "Parent post link"
+#~ msgid ""
+#~ "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">"
+#~ "%title</span>"
+#~ msgstr ""
+#~ "<span class=\"meta-nav\">פורסם ב</span><span class=\"post-title\">%title</"
+#~ "span>"
+
+#~ msgid "Next Image"
+#~ msgstr "תמונה הבאה"
+
+#~ msgid "Menu and widgets"
+#~ msgstr "תפריטים ווידג'טים"
+
+#~ msgid "Previous Image"
+#~ msgstr "תמונה קודמת"
+
+#~ msgid "collapse child menu"
+#~ msgstr "הסתר תפריט"
+
+#~ msgid "expand child menu"
+#~ msgstr "הצג תפריט"
+
+#~ msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+#~ msgid "no-subset"
+#~ msgstr "no-subset"
+
+#~ msgctxt "Inconsolata font: on or off"
+#~ msgid "on"
+#~ msgstr "on"
+
+#~ msgctxt "Noto Serif font: on or off"
+#~ msgid "on"
+#~ msgstr "off"
+
+#~ msgctxt "Noto Sans font: on or off"
+#~ msgid "on"
+#~ msgstr "off"
+
+#~ msgid "Add widgets here to appear in your sidebar."
+#~ msgstr "הוספת ווידג'טים שיוצגו בתפריט הצדדי."
+
+#~ msgid "Widget Area"
+#~ msgstr "אזור ווידג'טים"
+
+#~ msgid "Social Links Menu"
+#~ msgstr "תפריט קישורים חברתיים"
+
+#~ msgid "https://wordpress.org/"
+#~ msgstr "https://wordpress.org/"
+
+#~ msgid "Continue reading %s"
+#~ msgstr "להמשיך לקרוא %s"
+
+#~ msgid "View all posts by %s"
+#~ msgstr "הצג פוסטים מאת %s"
+
+#~ msgid "Published by"
+#~ msgstr "מאת"
+
+#~ msgid "Page"
+#~ msgstr "עמוד"
+
+#~ msgid "Next page"
+#~ msgstr "עמוד הבא"
+
+#~ msgid "Previous page"
+#~ msgstr "עמוד קודם"
+
+#~ msgid "It looks like nothing was found at this location. Maybe try a search?"
+#~ msgstr "נראה כי אין כאן כלום. אולי כדאי לנסות את אפשרות החיפוש."
