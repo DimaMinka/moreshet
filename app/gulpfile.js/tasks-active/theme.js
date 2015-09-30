@@ -19,5 +19,12 @@ gulp.task('theme-lang', function() {
   .pipe(gulp.dest(config.lang.dest));
 });
 
+// Copy everything under `src/languages` indiscriminately
+gulp.task('theme-admin', function() {
+  return gulp.src(config.admin.src)
+  .pipe(plugins.changed(config.admin.dest))
+  .pipe(gulp.dest(config.admin.dest));
+});
+
 // All the theme tasks in one
-gulp.task('theme', ['theme-lang', 'theme-php']);
+gulp.task('theme', ['theme-lang', 'theme-php', 'theme-admin']);

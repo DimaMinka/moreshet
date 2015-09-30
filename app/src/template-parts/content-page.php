@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-		<?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
+		<?php if( get_post_meta( $post->ID, 'sg_sidebar_style', true ) != 'sg_sidebar_right_book' ) the_post_thumbnail( 'single-post-thumbnail' ); ?>
 		<?php add_filter('the_content', 'strip_shortcodes'); ?>
 		<?php the_content(); ?>
 		<?php

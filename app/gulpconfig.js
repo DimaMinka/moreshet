@@ -99,6 +99,10 @@ module.exports = {
       src: src+'**/*.php'
     , dest: build
     }
+  , admin: {
+      src: src+'admin/**/*'
+    , dest: build+'admin/'
+    }
   },
 
   utils: {

@@ -28,7 +28,7 @@
 
 			<figure class="site-logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="<?php if(  get_header_image() ) : echo get_header_image(); else : echo get_template_directory_uri(); ?>/images/logo.png<?php endif; ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>">
+					<img src="<?php if(  get_header_image() ) : echo get_header_image(); else : echo get_template_directory_uri(); ?>/images/logo.png<?php endif; ?>" alt="<?php echo get_bloginfo( 'title' ); ?>">
 				</a>
 			</figure>
 
