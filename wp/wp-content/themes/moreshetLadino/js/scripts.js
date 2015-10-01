@@ -3708,7 +3708,8 @@
                 $('.bxslider').bxSlider({
                     mode: 'fade',
                     auto: true,
-                    pager: false
+                    pager: false,
+                    controls: false
                 });
             };
 
