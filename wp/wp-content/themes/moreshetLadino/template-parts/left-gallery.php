@@ -28,6 +28,7 @@
 
                 <a class="fancybox<?php echo $imageClass; ?>" href="<?php echo $image; ?>" rel="group-<?php echo $post->ID; ?>">
                     <img src="<?php echo $imageAttr[0]; ?>" alt="<?php echo $post->post_title; ?>">
+                    <?php if( $postImage->post_excerpt ) : ?><span class="caption"> <?php echo $postImage->post_excerpt; ?></span><?php endif; ?>
                 </a>
 
             <?php }
