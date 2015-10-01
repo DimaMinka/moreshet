@@ -45,6 +45,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 # Plugins
+	## Fancybox
+	## Bxslider
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
@@ -118,4 +120,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Bower
 --------------------------------------------------------------*/
 @import "plugins/jquery.fancybox";
+@import "plugins/bxslider";
 

@@ -48,7 +48,7 @@ module.exports = {
       scripts: ['scripts']
     }
   , chunks: { // Chunks are arrays of globs matching source files that combine to provide specific functionality
-      scripts: [src+'js/skip-link-focus-fix.js', bower+'fancybox/source/jquery.fancybox.js', src+'js/main.js']
+      scripts: [src+'js/skip-link-focus-fix.js', bower+'fancybox/source/jquery.fancybox.js', bower+'bxslider-4/dist/jquery.bxslider.js', src+'js/main.js']
     }
   , dest: build+'js/' // Where the scripts end up
   , lint: {

@@ -35,19 +35,9 @@
                 });
             };
 
-            /*Vertical align gallery*/
-            /*if($('.gallery').length) {
-                var 
-                    gallery = $('.gallery'),
-                    primary = $('.site-content').find('#primary'),
-                    primaryHeight  = primary.height(),
-                    secondary = $('.site-content').find('#secondary'),
-                    secondaryHeight  = parseInt(secondary.css('height'));
-
-                console.log(primaryHeight);
-                console.log(secondaryHeight);
-                    primary.css('height', secondaryHeight);
-            }*/
+            if($('.bxslider').length) {
+                $('.bxslider').bxSlider();
+            };
 
     });
 

@@ -29,6 +29,7 @@
     "build"
   ],
   "dependencies": {
+    "bxslider-4": "~4.2.5",
     "fancybox": "~2.1.5"
   }
 }
