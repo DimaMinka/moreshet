@@ -36,7 +36,11 @@
             };
 
             if($('.bxslider').length) {
-                $('.bxslider').bxSlider();
+                $('.bxslider').bxSlider({
+                    mode: 'fade',
+                    auto: true,
+                    pager: false
+                });
             };
 
     });
