@@ -47,32 +47,15 @@
 	</header><!-- #masthead -->
 
     <div class="page-photos">
-        <!-- 
-        <?php
-        for( $i = 1; $i <= 3; $i++) {
-            $check_thumbID = ( is_page() ? get_post_meta( $post->ID, 'sg_thumb_'.$i, true ) : '' );
-            $postID = ( $check_thumbID != '' ? $post->ID : get_option( 'page_on_front' ) );
-            $thumbID = get_post_meta( $postID, 'sg_thumb_'.$i, true );
 
-            $image = wp_get_attachment_image_src( $thumbID, 'large' );
-            printf('
-                <div class="photo">
-                    <img src="%s" alt="%s">
-                </div>',
-                $image[0],
-                get_the_title( $thumbID )
-            );
-        }
+        <?php
+
+        // get_template_part( 'template-parts/top', 'banners' );
+
+         get_template_part( 'template-parts/top', 'slider' );
+
         ?>
-				-->
-				<ul class="bxslider">
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/slides/slide1.jpg" alt=""></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/slides/slide2.jpg" alt=""></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/slides/slide3.jpg" alt=""></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/slides/slide4.jpg" alt=""></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/slides/slide5.jpg" alt=""></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/slides/slide6.jpg" alt=""></li>
-				</ul>
+
     </div>
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
