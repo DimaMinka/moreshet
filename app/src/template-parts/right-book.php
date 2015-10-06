@@ -52,7 +52,7 @@ $bookCat = get_post_meta( $post->ID, 'sg_book_category', true );
             <a class="book-tel" href="tel:<?php echo $phoneNumber; ?>"><?php echo $phoneTitle; ?></a>
         </div>
 
-        <div class="paypal"><a href="<?php echo $sideBtnLink; ?>" class="sprite sprite-paypal"<?php echo $sideBtn; ?>>PAYPAL</a></div>
+        <?php if( $sideBtnLink != '#' ) : ?><div class="paypal"><a href="<?php echo $sideBtnLink; ?>" class="sprite sprite-paypal"<?php echo $sideBtn; ?>>PAYPAL</a></div><?php endif; ?>
 
         <?php $sideThumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', false ); ?>
         <a class="katava fancybox" href="<?php echo $sideThumb[0]; ?>" rel="group" ><?php the_post_thumbnail( 'medium' ); ?></a>
